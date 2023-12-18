@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom'
 // import {CSSTransition} from 'react-transition-group'
 import classNames from 'classnames'
 import { connect } from 'react-redux'
+import { Share } from '@nutui/icons-react';
+import { Toast } from '@nutui/nutui-react';
 
 import Cd from './cd/cd'
 import MusicList from './music-list/music-list'
@@ -167,13 +169,6 @@ class Player extends Component {
     const { currentMusic, playList } = this.props
     return (
       <div className="player">
-        {/*<CSSTransition in={isFull} timeout={150} classNames="player-full"*/}
-        {/*onEnter={() => {*/}
-        {/*this.mmPlayer.style.display = 'block';*/}
-        {/*}}*/}
-        {/*onExited={() => {*/}
-        {/*this.mmPlayer.style.display = 'none';*/}
-        {/*}}>*/}
         <div
           ref="mmPlayer"
           className="player-full"
@@ -186,14 +181,28 @@ class Player extends Component {
             }}
           />
           <div className="header">
-            <span
-              className="header-back"
-              onClick={() => {
-                this.setState({ isFull: false })
-              }}
-            />
-            <h1>{currentMusic.name}</h1>
-            <h2>{currentMusic.singer}</h2>
+            <div>
+              <span
+                className="header-back"
+                onClick={() => {
+                  this.setState({ isFull: false })
+                }}
+              />
+              <h1>{currentMusic.name}</h1>
+              <h2>{currentMusic.singer}</h2>
+            </div>
+            <div>
+              <Share onClick={() => Toast.show({
+                content: '复制分享链接成功',
+                icon: 'success'
+              })} style={{
+                color:'white',
+                height: 20,
+                width:20,
+                position: 'relative',
+                right: -40
+              }}></Share>
+            </div>
           </div>
           <div className="middle">
             <Cd isPlay={isPlay} image={currentMusic.image} />
@@ -258,7 +267,7 @@ class Player extends Component {
           onItemClick={this.selectPlay}
           deleteClick={this.deleteClick}
         />
-      </div>
+      </div >
     )
   }
 }

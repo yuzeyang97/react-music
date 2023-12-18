@@ -6,7 +6,7 @@
   background-color: $header-bg;
   .mm-header-left {
     position: absolute;
-    top: 45px;
+    top: 35px;
     left: 40px;
     width: 70px;
     height: 70px;
@@ -43,11 +43,18 @@
   }
   .mm-header-right {
     position: absolute;
-    top: 45px;
-    right: 33px;
+    top: 30px;
+    right: 43px;
     width: 70px;
     height: 70px;
     background-image: url('pf.png');
     @include bg-full;
+  }
+  .mm-header-title-ct{
+    color: white;
+    font-weight: 600;
+    position: relative;
+    top: 2px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif 
   }
 }

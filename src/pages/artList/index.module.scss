@@ -1,0 +1,29 @@
+.listWrapper {
+  padding: 80px;
+
+  :global {
+    .nut-vertical-items li {
+      margin-top: 15px
+    }
+  }
+}
+
+.titleWrapper {
+  display: flex;
+
+}
+
+.title {
+  font-size: 100px;
+  font-weight: 800;
+}
+
+.content{
+  margin-top: 80px;
+
+  .orderWrapper{
+    display: flex;
+    column-gap: 20px;
+    margin-bottom: 20px;
+  }
+}

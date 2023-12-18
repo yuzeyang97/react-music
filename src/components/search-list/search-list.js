@@ -23,11 +23,11 @@ class SearchList extends Component {
     this.state = {
       tabData: [
         {
-          title: '单曲',
+          title: '单曲/文章',
           type: 1
         },
         {
-          title: '歌单',
+          title: '专辑',
           type: 1000
         }
       ], //Tab数据

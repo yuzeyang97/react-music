@@ -1,0 +1,92 @@
+.registContent,
+.profileContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  padding-top: 300px;
+  box-sizing: border-box;
+}
+
+.profileContent {
+  padding-top: 150px;
+}
+
+.registContent {
+  padding-top: 0px;
+}
+
+.submitBtn {
+  margin-top: 50px;
+}
+
+.loginContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 150px;
+}
+
+.tabsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+
+  :global {
+    .nut-tabs__titles--scrollable {
+      border-radius: 40px;
+    }
+
+    .nut-cell-group__wrap .nut-cell {
+      align-items: center !important;
+    }
+  }
+}
+
+.profileDetailContent {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+}
+
+.userCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%;
+  padding: 40px 50px;
+  border-radius: 30px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 80px;
+  box-sizing: border-box;
+
+  .listTitle {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+
+  .listItem {
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    border-bottom: 1px solid #ababab;
+  }
+}
+
+.cardRight {
+  text-align: end;
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+}

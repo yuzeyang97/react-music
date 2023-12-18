@@ -8,9 +8,12 @@ import './columnList.scss'
 // 歌曲基础列表组件——列
 
 const ColumnList = props => {
-  const { list, onItemClick } = props
+  const { list, onItemClick, isNoWrapper } = props
   return (
-    <div className="column-wrapper">
+    <div className="column-wrapper" style={{
+      flexWrap: isNoWrapper ? 'nowrap' : 'wrap',
+      overflow: 'scroll'
+    }}>
       {list.length > 0 &&
         list.map(item => {
           return (

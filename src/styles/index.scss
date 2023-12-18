@@ -4,8 +4,8 @@
 
 // 间接设置全局动态属性可以防止它们在局部被覆
 :root {
-  --THEME: var(--USER-THEME-COLOR, #e5473c);
-  --THEME-COLOR: var(--USER-THEME-COLOR, #e5473c);
+  --THEME: var(--USER-THEME-COLOR, #222);
+  --THEME-COLOR: var(--USER-THEME-COLOR, #222);
 }
 
 //#root, body, html {
