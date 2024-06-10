@@ -1,0 +1,97 @@
+.cart-page {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    overflow: auto;
+
+    .cart-title {
+        text-align: center;
+        margin-bottom: 2rem;
+        color: #333;
+    }
+
+    .cart-item {
+        display: flex;
+        background-color: #fff;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        justify-content: space-between;
+
+        .cart-item-left {
+            display: flex;
+        }
+
+        .add-wrapper {
+            display: flex;
+            grid-gap: 2rem;
+            gap: 1.5rem;
+            align-items: end;
+            padding-bottom: 1rem;
+            padding-right: 1rem;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .cart-image {
+            width: 5rem;
+            height: auto;
+        }
+
+        .cart-info {
+            padding: 0.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+
+            .cart-item-title {
+                font-size: 1rem;
+                margin: 0.5rem 0;
+            }
+
+            .cart-item-price {
+                font-size: 1.2rem;
+                margin: 0;
+            }
+        }
+    }
+
+    .empty-cart {
+        text-align: center;
+        color: #666;
+    }
+
+    .add-to-cart {
+        padding: 0.6rem 1.2rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        color: #333;
+        background-color: #FFF;
+        border-radius: 1.3rem;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .total-price-wrapper {
+        display: flex;
+        flex-direction: column;
+        grid-gap: 0.5rem;
+        gap: 0.5rem;
+        border-top: 1px solid #3333;
+        padding: 1rem 0px;
+        align-items: end;
+        margin-bottom: 1rem;
+        border-bottom: 1px solid #3333;
+
+        .item {
+            display: flex;
+            gap: 20px;
+            width: 100%;
+            justify-content: space-between;
+
+            .item-title {
+                color: #626060ee;
+            }
+        }
+    }
+}

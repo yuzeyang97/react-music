@@ -22,6 +22,7 @@ import Player from '@/components/player/player'
 import Menu from '@/components/menu/menu'
 import '@nutui/nutui-react/dist/style.css'
 import TabBar from '../components/tab-bar'
+import CartPage from './Shop/CartPage'
 
 const Discover = lazy(() => import('@/pages/discover/discover'))
 const Profile = lazy(() => import('@/pages/profile/index'))
@@ -31,6 +32,8 @@ const PlayList = lazy(() => import('@/pages/playlist/playlist'))
 const SheetList = lazy(() => import('@/pages/sheetlist/sheetlist'))
 const ArtDetail = lazy(() => import('@/pages/artDetail/index'))
 const ArtList= lazy(() => import('@/pages/artList/index'))
+const Shop= lazy(() => import('@/pages/Shop/index'))
+const ProductDetails= lazy(() => import('@/pages/Shop/ProductDetails'))
 
 class App extends Component {
   constructor(props) {
@@ -67,6 +70,9 @@ class App extends Component {
                 <Route path="/artDetail" component={ArtDetail} />
                 <Route path="/artList" component={ArtList} />
                 <Route path="/profile" component={Profile} />
+                <Route path="/shop" component={Shop} />
+                <Route path="/product/:id" component={ProductDetails} />
+                <Route path="/cart" component={CartPage} />
                 <Redirect to="/discover" />
               </Switch>
             </Suspense>

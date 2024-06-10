@@ -8,10 +8,9 @@
  */
 import React from 'react'
 import { Tabbar } from '@nutui/nutui-react';
-import { Order, Home, My } from '@nutui/icons-react';
 import { useHistory } from 'react-router-dom'
 
-const routerPath = ['/discover', '/artList', '/profile']
+const routerPath = ['/discover', '/artList', '/shop', '/profile']
 
 export default (props) => {
   const history = useHistory()
@@ -20,8 +19,9 @@ export default (props) => {
   const defaultValue = routerPath.findIndex((item) => item === path)
   console.log(path, 666666);
   return (<Tabbar onSwitch={(value) => { console.log(history.push(routerPath[value])) }} defaultValue={defaultValue}>
-    <Tabbar.Item title="首页" icon={<Home width={18} height={18} />} />
-    <Tabbar.Item title="文章" icon={<Order width={18} height={18} />} />
-    <Tabbar.Item title="我的" icon={<My width={18} height={18} />} />
+    <Tabbar.Item title="首页" />
+    <Tabbar.Item title="文章" />
+    <Tabbar.Item title="商城" />
+    <Tabbar.Item title="我的" />
   </Tabbar>)
 }

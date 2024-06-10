@@ -14,7 +14,7 @@ import './mm-header.scss'
 // header组件
 
 const MmHeader = props => {
-  const showHeader = /music|discover|video|art|profile/.test(props.location.pathname)
+  const showHeader = /music|discover|video|art|profile|shop|product|cart/.test(props.location.pathname)
   const open = function mmHeaderOpenDrawer() {
     props.onOpen(true)
   }
